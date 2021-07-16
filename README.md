@@ -1,6 +1,22 @@
-# Vue 3 + Typescript + Vite
+# Proto-o2o-platform
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+This codebase was create to demonstrate a fully fledged fullstack 020 application built with **Vue3** including CRUD operations, authentication, routing, pagination, and more.
+
+## What works?
+
+- Vue
+  - [Composition API](https://composition-api.vuejs.org/)
+  - [Suspense](https://v3.vuejs.org/guide/component-dynamic-async.html#using-with-suspense) (Experimental)
+  - [Vue router](https://next.router.vuejs.org/)
+  - [Script setup sugar](https://github.com/vuejs/rfcs/blob/sfc-improvements/active-rfcs/0000-sfc-script-setup.md)
+  - [Script ref sugar](https://github.com/vuejs/rfcs/blob/ref-sugar/active-rfcs/0000-ref-sugar.md)
+  - Unit test ([Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro))
+  - [Vue tsc](https://github.com/johnsoncodehk/vue-tsc)
+- Others
+  - [TypeScript](https://www.typescriptlang.org/)
+  - [ESLint](https://eslint.vuejs.org/)
+  - [Vite](https://github.com/vitejs/vite)
+  - E2E test ([Cypress](https://docs.cypress.io))
 
 ## Recommended IDE Setup
 
