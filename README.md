@@ -18,9 +18,13 @@ This codebase was create to demonstrate a fully fledged fullstack 020 applicatio
   - [Vite](https://github.com/vitejs/vite)
   - E2E test ([Cypress](https://docs.cypress.io))
 
+## Recommended local Setup
+
+- node: version 13 or higer (or 14.17.3 LTS)
+
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) + [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
 
 ### If Using `<script setup>`
 

@@ -9,16 +9,24 @@
     "lint:script": "eslint \"{src/**/*.{ts,vue},cypress/**/*.js}\"",
     "lint:tsc": "vue-tsc --noEmit",
     "lint": "concurrently 'yarn lint:tsc' 'yarn lint:script'",
+    "test:unit": "jest --coverage",
     "test:e2e": "yarn build && concurrently -k \"yarn serve\" \"cypress run -c baseUrl=http://localhost:5000\"",
-    "test:e2e:ci": "cypress run -C cypress.prod.json"
+    "test:e2e:ci": "cypress run -C cypress.prod.json",
+    "test": "yarn test:unit && yarn test:e2e"
   },
   "dependencies": {
+    "dayjs": "^1.10.6",
     "vue": "^3.0.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.13.16",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/vue": "^6.4.0",
+    "@types/jest": "^26.0.22",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
     "@vitejs/plugin-vue": "^1.2.5",
     "@vue/compiler-sfc": "^3.0.5",
+    "babel-jest": "^27.0.6",
     "concurrently": "^6.2.0",
     "cypress": "^7.7.0",
     "eslint": "^7.30.0",
@@ -29,10 +37,14 @@
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-vue": "^7.8.0",
     "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "jsdom": "^16.5.3",
     "lint-staged": "^11.0.1",
     "rollup-plugin-analyzer": "^4.0.0",
+    "ts-jest": "^27.0.1",
     "typescript": "^4.3.2",
     "vite": "^2.4.2",
+    "vue-jest": "^5.0.0-alpha.8",
     "vue-tsc": "^0.0.24"
   },
   "husky": {
@@ -44,5 +56,36 @@
   "lint-staged": {
     "src/**/*.{ts,vue}": "eslint --fix",
     "cypress/**/*.js": "eslint --fix"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {}
+    },
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.vue$": "vue-jest",
+      "^.+\\js$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{ts,vue}",
+      "!<rootDir>/src/config.ts"
+    ],
+    "moduleFileExtensions": [
+      "vue",
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/*.spec.ts"
+    ],
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setup-test.ts"
+    ]
   }
 }
