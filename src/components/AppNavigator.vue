@@ -1,10 +1,17 @@
 <template>
-  <div class="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-white flex-none flex">
-    <div class="flex-none pl-4 sm:pl-6 xl:pl-8 flex items-center border-b border-gray-200 lg:border-b-0 lg:w-60 xl:w-72">
-      <AppLink name="global-feed">
+  <div class="sticky top-0 z-40 lg:z-50 w-full max-w-8xl mx-auto bg-white flex-none flex border-b border-gray-200">
+    <div class="flex-none pl-4 sm:pl-6 xl:pl-8 flex items-center  lg:w-60 xl:w-72">
+      <AppLink
+        name="global-feed"
+        class="overflow-hidden w-10 md:w-auto font-sans font-bold text-2xl text-blue-900"
+      >
         Proto
+        <span class="sr-only">Prototype by Ex-Platform</span>
       </AppLink>
-      <ul>
+    </div>
+    <div class="flex-auto px-4 sm:px-6 lg:mx-6 lg:px-0 xl:mx-8 h-18 flex items-center justify-between">
+      <div />
+      <ul class="lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
         <li
           v-for="link in navLinks"
           :key="link.name"
@@ -75,7 +82,8 @@ ref: allNavLinks = computed<NavLink[]>(() => [
   },
 ])
 
-ref: navLinks = computed(() => allNavLinks.filter(
-  l => l.display === displayStatus || l.display === 'all',
+// TODO: vue-tsc read `allNavLinks` and `displayStatus` as ComputedRef
+ref: navLinks = computed(() => (allNavLinks as unknown as NavLink[]).filter(
+  l => l.display === (displayStatus as unknown as string) || l.display === 'all',
 ))
 </script>
