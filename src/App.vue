@@ -1,7 +1,8 @@
 <template>
+  <AppNavigator />
   <RouterView />
 </template>
 
 <script lang="ts" setup>
-import Home from './pages/Home.vue'
+import AppNavigator from './components/AppNavigator.vue'
 </script>

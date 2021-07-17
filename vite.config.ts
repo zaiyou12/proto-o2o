@@ -10,6 +10,12 @@ export default defineConfig({
       'src': resolve(__dirname, 'src'),
     },
   },
-  plugins: [vue(),
-  analyzer({ summaryOnly: true })],
+  plugins: [
+    vue({
+      script: {
+        refSugar: true
+      }
+    }),
+    analyzer({ summaryOnly: true })
+  ],
 })
