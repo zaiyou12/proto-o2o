@@ -13,7 +13,7 @@ export type AppRouteNames = 'global-feed'
 | 'profile-favorites'
 | 'settings'
 
-const router = createRouter({
+export const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     { name: 'global-feed', path: '/', component: Home },
@@ -29,5 +29,3 @@ const router = createRouter({
     { name: 'settings', path: '/settings', component: Home },
   ],
 })
-
-export default router
