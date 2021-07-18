@@ -1,5 +1,5 @@
 <template>
-  <ArticleBanner detail="O2O application" />
+  <ArticleBanner detail="articles with filter" />
   <button
     type="button"
     class="fixed z-50 bottom-4 right-4 w-16 h-16 rounded-full bg-gray-900 text-white block lg:hidden"

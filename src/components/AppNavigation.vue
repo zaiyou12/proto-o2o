@@ -10,7 +10,23 @@
       </AppLink>
     </div>
     <div class="flex-auto px-4 sm:px-6 lg:mx-6 lg:px-0 xl:mx-8 h-18 flex items-center justify-between">
-      <div />
+      <nav class="text-gray-600">
+        <AppLink
+          class="mr-5 hover:text-gray-900"
+          active-class="active"
+          name="global-feed"
+        >
+          Articles
+        </AppLink>
+        <AppLink
+          class="mr-5 hover:text-gray-900"
+          active-class="active"
+          name="article"
+          :params="{slug: '123'}"
+        >
+          Articles-detail
+        </AppLink>
+      </nav>
       <ul class="lg:w-64 pl-8 flex-shrink-0 flex items-center justify-end space-x-6">
         <li
           v-for="link in navLinks"
