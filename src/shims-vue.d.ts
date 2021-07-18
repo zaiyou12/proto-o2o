@@ -8,5 +8,6 @@ declare module '*.vue' {
 interface ImportMeta {
   env: {
     BASE_URL: string
+    API_HOST: string
   }
 }

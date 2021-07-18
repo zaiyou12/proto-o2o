@@ -4,7 +4,7 @@
       <div class="px-1 pt-6 overflow-y-auto font-medium text-base sm:px-3 xl:px-5 lg:text-sm pb-10 lg:pt-10 lg:pb-14 sticky?lg:h-(screen-18)">
         <h3 class="text-lg font-semibold text-gray-700 dark:text-white mb-6">
           조건 검색
-        </h3><form action>
+        </h3><form>
           <div class="mb-6">
             <label
               class="text-gray-700 mb-4"

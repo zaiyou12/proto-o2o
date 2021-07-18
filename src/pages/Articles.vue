@@ -22,17 +22,41 @@
   </button>
   <div class="w-full max-w-8xl mx-auto">
     <div class="lg:flex">
-      <ArticleSidebar />
-      <ArticleList :articles="articles" />
+      <ArticlesSidebar />
+      <ArticlesList :articles="articles" />
+      <!-- <Suspense>
+        <template #default>
+          <ArticlesList :articles="articles" />
+        </template>
+        <template #fallback>
+          <div class="w-full">
+            Article is downloading...
+          </div>
+        </template>
+      </Suspense> -->
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import ArticleSidebar from 'src/components/ArticleSidebar.vue'
+import ArticlesList from 'src/components/ArticlesList.vue'
 import ArticleBanner from 'src/components/ArticleBanner.vue'
-import ArticleList from 'src/components/ArticleList.vue'
+import ArticlesSidebar from 'src/components/ArticlesSidebar.vue'
 
-// TODO: temp value
 ref: articles = ['1', '2', '3', '4', '5', '6']
+// import { useArticles } from 'src/services/article/useArticles'
+
+// const {
+//   fetchArticles,
+//   articlesDownloading,
+//   articlesCount,
+//   articles,
+//   updateArticle,
+//   page,
+//   changePage,
+//   tag,
+//   username,
+// } = useArticles()
+
+// await fetchArticles()
 </script>

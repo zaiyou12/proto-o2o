@@ -5,7 +5,7 @@
         Proto
       </h1>
       <p class="text-lg sm:text-2xl sm:leading-10">
-        {{ detail }}
+        {{ props.detail }}
       </p>
     </div>
   </div>
