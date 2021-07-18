@@ -1,7 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './pages/Home.vue'
 
-export type AppRouteNames = 'global-feed'
+export type AppRouteNames = 'home'
+| 'global-feed'
 | 'my-feed'
 | 'tag'
 | 'article'
@@ -16,7 +17,8 @@ export type AppRouteNames = 'global-feed'
 export const router = createRouter({
   history: createWebHashHistory(),
   routes: [
-    { name: 'global-feed', path: '/', component: Home },
+    { name: 'home', path: '/', component: Home },
+    { name: 'global-feed', path: '/o2o', component: () => import('./pages/Articles.vue') },
     { name: 'my-feed', path: '/my-feeds', component: Home },
     { name: 'tag', path: '/tag/:tag', component: Home },
     { name: 'article', path: '/article/:slug', component: Home },
