@@ -21,7 +21,7 @@ export const router = createRouter({
     { name: 'global-feed', path: '/o2o', component: () => import('./pages/Articles.vue') },
     { name: 'my-feed', path: '/my-feeds', component: Home },
     { name: 'tag', path: '/tag/:tag', component: Home },
-    { name: 'article', path: '/article/:slug', component: Home },
+    { name: 'article', path: '/article/:slug', component: () => import('./pages/ArticlesDetail.vue') },
     { name: 'create-article', path: '/article/create', component: Home },
     { name: 'edit-article', path: '/article/:slug/edit', component: Home },
     { name: 'login', path: '/login', component: Home },

@@ -12,14 +12,21 @@
               Bitters hashtag waistcoat fashion axe chia unicorn
             </h2>
             <p class="leading-relaxed">
+              Category: FULL-TIME
+            </p>
+            <p class="leading-relaxed">
               Date: 28th Jan. ~ 30th. Jan
             </p>
             <p class="leading-relaxed">
               Place: Ipanguacu, Brazil
             </p>
+            <p class="leading-relaxed">
+              Price: $ 58
+            </p>
             <AppLink
-              name="home"
+              name="article"
               class="text-indigo-500 inline-flex items-center mt-4"
+              :params="{slug: '123'}"
             >
               Learn More
               <svg
